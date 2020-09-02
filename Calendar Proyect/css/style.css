@@ -1,0 +1,372 @@
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    font-size: 12px;
+    margin: 0px;
+}
+
+/* HEADER */
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#header > div:nth-child(1) {
+    text-align: center;
+    width: 50%;
+    font-size: 1rem;
+    color: #131225;
+}
+
+#header > div:nth-last-child(1) {
+    width: 15%;
+}
+
+#header > div:nth-last-child(1) button {
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #131225;
+    color: white;
+}
+
+.fa-plus {
+    margin-right: 5px;
+}
+
+/* BODY */
+
+main {
+    margin: 0px;
+}
+
+#augcontainer {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: #131225;
+}
+
+#headcalendar {
+    display: flex;
+    width: 100%;
+    position: relative;
+    background-color: #131225;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#headcalendar p {
+    color: white;
+}
+
+.fa-caret-left {
+    cursor: pointer;
+    color: white;
+}
+
+.fa-caret-right {
+    cursor: pointer;
+    color: white;
+}
+
+#headcalendar div {
+    font-size: x-large;
+}
+
+.number {
+    background-color: black;
+    color: white;
+    padding-left: 47%;
+    padding-right: 47%;
+    cursor: pointer;
+}
+
+#weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+#weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(91.2rem/ 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+
+#mainstructure {
+    display: flex;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.6rem;
+}
+
+.days div {
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    width: calc(86.2rem / 7);
+    height: 6rem;
+    display: flex;
+    border: 1px solid white;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+
+.days div:hover {
+    border: 1px solid greenyellow;
+}
+
+.fa-calendar-plus {
+    position: absolute;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.days div p {
+    color: blue;
+    margin: 0;
+    font-size: x-small;
+    background: white;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.prev-date, .next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: orange;
+}
+
+/* EVENT CARD */
+
+#cardevent {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 999;
+    position: absolute;
+    height: 666px;
+    top: 40px;
+    left: 75px;
+    border: 2px solid white;
+    background-color: #131225;
+}
+
+#cardevent div:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+#formevent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+#formevent > div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#btnhide {
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+#cardevent div header h2 {
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+
+#cardevent div header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#cardevent div header div:nth-child(1) {
+    text-align: center;
+    width: 95%;
+    margin: 0px;
+}
+
+#cardevent div header div:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#formevent > div:nth-child(1) label{
+    margin-right: 69px;
+    color: white;
+}
+
+#formevent > div:nth-child(1) input {
+    width: 56.6%;
+    height: 23px;
+}
+
+#titlerequired, #daterequired {
+    background-color: red;
+    width: 56.6%;
+    text-align: center;
+    margin-left: 114px;
+    font-size: small;
+}
+
+#formevent > div:nth-child(2) label{
+    margin-right: 20px;
+    color: white;
+}
+
+#formevent > div:nth-child(2) input {
+    width: 56.5%;
+    height: 25px;
+}
+
+#formevent > div:nth-child(3) label{
+    margin-left: 5px;
+    color: white;
+}
+
+#formevent > div:nth-child(4) label{
+    margin-right: 33px;
+    color: white;
+}
+
+#formevent > div:nth-child(4) input {
+    width: 56.5%;
+    height: 25px;
+}
+
+#formevent > div:nth-child(5) label{
+    margin-left: 5px;
+    color: white;
+}
+
+#formevent > div:nth-child(6) label{
+    margin-right: 63px;
+    color: white;
+}
+
+#formevent > div:nth-child(6) select {
+    width: 56.4%;
+    height: 25px;
+}
+
+#formevent > div:nth-child(7) label {
+    margin-right: 15px;
+    position: relative;
+    bottom: 70px;
+    color: white;
+}
+
+#formevent > div:nth-child(7) textarea {
+    width: 56.3%;
+}
+
+#formevent > div:nth-child(8) label{
+    margin-right: 18px;
+    color: white;
+}
+
+#formevent > div:nth-child(8) select {
+    width: 55.4%;
+    height: 25px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#cancel {
+    border-radius: 4px;
+    width: 10%;
+    cursor: pointer;
+}
+
+#create {
+    margin-right: 2px;
+    border-radius: 4px;
+    width: 10%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* MINI EVENT CARD */ 
+
+.minieventcard {
+    width: 300px;
+    background-color: #131225;
+    z-index: 99999;
+    position: absolute;
+    left: 300px;
+    top: 370px;
+    display: flex;
+    flex-direction: column;
+}
+
+#containerbuttons {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.minieventcard p {
+    text-align: center;
+    color: white;
+}
+
+#clear {
+    width: 45%;
+    background: papayawhip;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#noclear {
+    width: 45%;
+    background: papayawhip;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

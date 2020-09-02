@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div id="cardevent" class="hidden">
+        <div>
+            <header>
+                <div>
+                    <h2>NEW EVENT</h2>
+                </div>
+                <div>
+                    <span id="btnhide">&times;</span>
+                </div>
+            </header>
+        </div>
+        <div>
+            <form id="formevent" name="formevent">
+                <div>
+                    <label for="title">Title:</label>
+                    <input id="title" type="text" name="title" required maxlength="60">
+                    <p id="titlerequired" class="hidden">Title is required</p>
+                    <p id="titlerequired1" class="hidden">Title is too long</p>
+                </div>
+                <div>
+                    <label for="initialdate">Initial date:</label>
+                    <input id="date" type="datetime-local" name="date" value="" required>
+                    <p id="daterequired" class="hidden">Date incorrect</p>
+                </div>
+                <div>
+                    <input id="endate" type="checkbox" name="endate">
+                    <label for="enddate">End date</label>
+                </div>
+                <div id="divcontainerenddate" class="hidden">
+                    <label for="finaldate">End date:</label>
+                    <input id="datetime" type="datetime-local" name="finaldate" value="">  
+                </div>
+                <div>
+                    <input id="remind" type="checkbox" name="remind">
+                    <label for="remind">Remind me when this event expires</label>
+                </div>
+                <div id="divcontainerremind" class="hidden">
+                    <label for="time">Time:</label>
+                    <select id="time" name="time">
+                        <option>5 minutes before</option>
+                        <option>10 minutes before</option>
+                        <option>15 minutes before</option>
+                        <option>30 minutes before</option>
+                        <option>60 minutes before</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" id="" cols="30" rows="5" maxlength="500"></textarea>
+                </div>
+                <div>
+                    <label for="eventype">Event type:</label>
+                    <select id="type" name="type" name="type">
+                        <option>Meeting</option>
+                        <option>Personal</option>
+                        <option>Study</option>
+                    </select>
+                </div>
+            </form>
+            <div id="buttons">
+                <button id="cancel">Cancel</button>
+                <button id="create">Create</button>
+            </div>
+        </div>
+    </div>
+    <header id="header">
+        <div>
+            <h1>MARMOTITAS CALENDAR</h1>
+        </div>
+        <div>
+            <button id="btnnewevent">
+                <i class="fas fa-plus"></i>
+                ADD EVENT
+            </button>
+        </div>
+    </header>
+    <main>
+        <section id="augcontainer">
+            <div id="headcalendar">
+                <div><i class="fas fa-caret-left"></i></div>
+                <p><span id="month"></span><span id="day"> </span><span id="year"></span></p>
+                <div><i class="fas fa-caret-right"></i></div>
+            </div>
+            <div id="weekdays">
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+                <div>Sunday</div>
+            </div>
+            <div id="mainstructure">
+                <div class="minieventcard hidden"></div>
+                <div class="days"></div>
+            </div>
+        </section>
+    </main>
+    <script src="js/funcionality.js"></script>
+</body>
+</html>
